@@ -4,13 +4,13 @@
 			"name": "vscode-copilot-chat",
 			"path": "/projects/vscode-copilot-chat"
 		},
-        {
-			"name": "code-oss-workspace",
-			"path": "/projects/code-oss-workspace"
-		},
 		{
 			"name": "che-code",
 			"path": "/projects/che-code"
+		},
+		{
+			"name": "code-oss-workspace",
+			"path": "/projects/code-oss-workspace"
 		}
 	],
 	"extensions": {
