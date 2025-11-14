@@ -11,13 +11,6 @@ projects:
       checkoutFrom:
         remote: origin
         revision: main
-  - name: vscode-copilot-chat
-    git:
-      remotes:
-        origin: https://github.com/cgruver/vscode-copilot-chat.git
-      checkoutFrom:
-        remote: origin
-        revision: main
   - name: che-code
     git:
       remotes:
@@ -39,8 +32,8 @@ components:
       value: "/projects/home"
     - name: VSCODE_DEFAULT_WORKSPACE
       value: "/projects/code-oss-workspace/codeoss.code-workspace"
-    - name: GOPATH
-      value: /projects/home/go
+    - name: VSCODE_MANGLE_WORKERS
+      value: "8"
 - volume:
     size: 20Gi
   name: projects

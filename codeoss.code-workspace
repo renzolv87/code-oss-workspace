@@ -1,10 +1,6 @@
 {
 	"folders": [
 		{
-			"name": "vscode-copilot-chat",
-			"path": "/projects/vscode-copilot-chat"
-		},
-		{
 			"name": "che-code",
 			"path": "/projects/che-code"
 		},
