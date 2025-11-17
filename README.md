@@ -18,6 +18,35 @@ oc label configmap che-code-insiders app.kubernetes.io/part-of=che.eclipse.org a
 
 ```bash
 podman build -f build/dockerfiles/linux-libc-ubi9.Dockerfile -t linux-libc-ubi9 .
-export DOCKER_BUILDKIT=1`
+export DOCKER_BUILDKIT=1
 podman build -f build/dockerfiles/assembly.Dockerfile -t nexus.clg.lab:5002/dev-spaces/che-code:latest .
 ```
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vscode-editor-configurations
+  namespace: devspaces
+  labels:
+    app.kubernetes.io/part-of: che.eclipse.org
+    app.kubernetes.io/component: workspaces-config
+data:
+  settings.json: |
+    {
+      "chat.commandCenter.enabled": true
+    }
+```
+
+## Build github-chat
+```bash
+git clone 
+
+npx @vscode/dts dev
+
+```
+
+
+Notes:
+
+workbench.action.chat.triggerSetupForceSignIn
