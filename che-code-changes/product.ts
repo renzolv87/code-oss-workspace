@@ -76,7 +76,7 @@ else {
 				itemUrl: 'https://open-vsx.org/vscode/item',
 			},
 			defaultChatAgent: {
-				'extensionId': 'GitHub.copilot',
+				'extensionId': 'GitHub.copilot-chat',
 				'chatExtensionId': 'GitHub.copilot-chat',
 				'documentationUrl': 'https://aka.ms/github-copilot-overview',
 				'termsStatementUrl': 'https://aka.ms/github-copilot-terms-statement',

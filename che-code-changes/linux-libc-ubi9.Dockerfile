@@ -7,7 +7,8 @@
 #
 
 # https://registry.access.redhat.com/ubi9/nodejs-20
-FROM registry.access.redhat.com/ubi9/nodejs-22:9.6-1759119998 as linux-libc-ubi9-builder
+# FROM registry.access.redhat.com/ubi9/nodejs-22:9.6-1760386551 as linux-libc-ubi9-builder
+FROM nexus.clg.lab:5002/dev-spaces/vscode-builder:latest as linux-libc-ubi9-builder
 
 USER root
 
@@ -77,7 +78,7 @@ RUN NODE_ARCH=$(echo "console.log(process.arch)" | node) \
     && mkdir -p /checode-compilation/.build/node/v${NODE_VERSION}/linux-${NODE_ARCH} \
     && echo "caching /checode-compilation/.build/node/v${NODE_VERSION}/linux-${NODE_ARCH}/node" \
     && cp /usr/bin/node /checode-compilation/.build/node/v${NODE_VERSION}/linux-${NODE_ARCH}/node \
-    && NODE_OPTIONS="--max-old-space-size=8192" ./node_modules/.bin/gulp --verbose vscode-reh-web-linux-${NODE_ARCH}-min \
+    && NODE_OPTIONS="--max-old-space-size=8192" ./node_modules/.bin/gulp vscode-reh-web-linux-${NODE_ARCH}-min --verbose \
     && cp -r ../vscode-reh-web-linux-${NODE_ARCH} /checode \
     # cache shared libs from this image to provide them to a user's container
     && mkdir -p /checode/ld_libs \
