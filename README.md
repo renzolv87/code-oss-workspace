@@ -93,5 +93,3 @@ npm run get_token
 ```bash
 curl -s -H "Authorization: Bearer ${GITHUB_OAUTH_TOKEN}" https://api.github.com/copilot_internal/user
 ```
-
-Hey there
