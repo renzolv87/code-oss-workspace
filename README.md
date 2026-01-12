@@ -61,6 +61,7 @@ In my testing, I am self-hosting an OpenVSX instance following the pattern docum
 1. Publish the extension - Note, this process may be different if you are hosting OpenVSX in another way.
 
    ```bash
+   npm install -g ovsx
    export OVSX_REGISTRY_URL=https://$(oc get route open-vsx-server -n che-openvsx -o jsonpath={.spec.host})
    export OVSX_PAT=eclipse_che_token
    export NODE_TLS_REJECT_UNAUTHORIZED='0'
