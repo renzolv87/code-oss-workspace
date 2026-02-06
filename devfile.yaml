@@ -35,7 +35,7 @@ components:
     - name: VSCODE_DEFAULT_WORKSPACE
       value: "/projects/code-oss-workspace/codeoss.code-workspace"
 - volume:
-    size: 2Gi
+    size: 1Gi
   name: projects
 - name: prep-workspace
   container:
