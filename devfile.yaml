@@ -22,10 +22,10 @@ components:
 - name: dev-tools
   container:
     image: nexus.clg.lab:5002/dev-spaces/vscode-dev:latest
-    memoryRequest: 2Gi
-    memoryLimit: 50Gi
+    memoryRequest: 256M
+    memoryLimit: 6Gi
     cpuRequest: 100m
-    cpuLimit: "8"
+    cpuLimit: 2000m
     mountSources: true
     env:
     - name: SHELL
@@ -35,7 +35,7 @@ components:
     - name: VSCODE_DEFAULT_WORKSPACE
       value: "/projects/code-oss-workspace/codeoss.code-workspace"
 - volume:
-    size: 20Gi
+    size: 2Gi
   name: projects
 - name: prep-workspace
   container:
